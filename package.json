@@ -14,6 +14,6 @@
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.2",
-    "netlify-plugin-cypress": "^1.4.1"
+    "netlify-plugin-cypress": "^1.7.0"
   }
 }
