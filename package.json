@@ -9,7 +9,8 @@
     "serve": "ws --directory dist",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
-    "e2e:dist": "start-test serve 8000 'cypress open --config baseUrl=http://localhost:8000'"
+    "e2e:open": "start-test serve 8000 'cypress open --config baseUrl=http://localhost:8000'",
+    "e2e:run": "start-test serve 8000 'cypress run --config baseUrl=http://localhost:8000'"
   },
   "dependencies": {
     "@nuxt/content": "^1.9.0",
