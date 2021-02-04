@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.9.0",
-    "cypress": "^6.1.0",
+    "cypress": "^6.4.0",
     "nuxt": "^2.14.6",
     "remark-gfm": "^1.0.0"
   },
