@@ -88,8 +88,7 @@ describe("UI tests", function() {
       .first()
       .should(
         "have.attr",
-        "src",
-        "/_nuxt/assets/images/how-to-clone-a-github-repository.png"
-      );
+        "src"
+      ).should('include', 'how-to-clone-a-github-repository')
   });
 });
