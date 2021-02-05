@@ -21,7 +21,7 @@
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.2",
     "local-web-server": "4.2.1",
-    "netlify-plugin-cypress": "^1.7.0",
+    "netlify-plugin-cypress": "^1.8.0",
     "start-server-and-test": "1.12.0"
   }
 }
