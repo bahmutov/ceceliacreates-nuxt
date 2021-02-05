@@ -9,3 +9,5 @@ workflows:
           start: npm run serve
           wait-on: 'http://localhost:8000'
           config: 'baseUrl=http://localhost:8000'
+          # do not save built files since there are no jobs to follow
+          no-workspace: true
