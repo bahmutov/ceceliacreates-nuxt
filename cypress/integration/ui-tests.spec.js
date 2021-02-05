@@ -3,7 +3,6 @@
 describe("UI tests", function() {
   beforeEach("it visits the site", function() {
     cy.visit("/");
-    cy.wait(5000)
   });
 
   it("validates home page content", function() {
