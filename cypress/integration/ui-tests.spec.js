@@ -20,7 +20,8 @@ describe("UI tests", function() {
         gc();
         gc();
         gc();
-        gc()
+        gc();
+        cy.wait(1000)
       } else {
         cy.task('log', 'window.gc is unavailable')
       }
