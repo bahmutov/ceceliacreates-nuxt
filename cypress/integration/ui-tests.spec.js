@@ -13,13 +13,15 @@ describe("UI tests", function() {
   // })
   afterEach(() => {
     // https://github.com/cypress-io/cypress/issues/350#issuecomment-688969443
-    if (window.gc) {
-      window.gc();
-      window.gc();
-      window.gc();
-      window.gc();
-      window.gc()
-    }
+    cy.window().its('gc').then(gc => {
+      if (gc) {
+        gc();
+        gc();
+        gc();
+        gc();
+        gc()
+      }
+    })
   })
 
   it("validates home page content", function() {
