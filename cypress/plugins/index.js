@@ -1,4 +1,11 @@
 module.exports = (on, config) => {
+  if (process.env.ELECTRON_EXTRA_LAUNCH_ARGS) {
+    console.log('ELECTRON_EXTRA_LAUNCH_ARGS=%s', process.env.ELECTRON_EXTRA_LAUNCH_ARGS)
+  } else {
+    console.log('ELECTRON_EXTRA_LAUNCH_ARGS is not set')
+  }
+
+
   on('task', {
     log(x) {
       console.log(x)
