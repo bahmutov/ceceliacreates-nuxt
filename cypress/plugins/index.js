@@ -4,9 +4,9 @@ module.exports = (on, config) => {
   //     launchOptions.args.push('--js-flags="--expose-gc"')
   //   }
 
-  //   if (browser.name === 'electron') {
-  //     launchOptions.args.push('js-flags', '--expose_gc --max-old-space-size=128')
-  //   }
+    // if (browser.name === 'electron') {
+    //   launchOptions.args.push('js-flags', '--expose_gc --max-old-space-size=128')
+    // }
   //   console.log('launch flags', launchOptions.args)
   //   return launchOptions
   // })
