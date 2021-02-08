@@ -14,5 +14,12 @@ TERM = "xterm"
 [[plugins]]
 # local Cypress plugin will test our site after it is built
 package = "netlify-plugin-cypress"
-[plugins.inputs]
-  record = true
+  [plugins.inputs]
+    # skip testing local site before deploy
+    skip = true
+    record = true
+  [plugins.inputs.onSuccess]
+    # run E2E tests against the deployed URL
+    enable = true
+    record = true
+    group = 'deployed'

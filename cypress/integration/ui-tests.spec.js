@@ -1,9 +1,32 @@
 /// <reference types="Cypress" />
 
 describe("UI tests", function() {
-  beforeEach("it visits the site", function() {
+  beforeEach("it visits the site", function () {
+    // cy.intercept('/__webpack_hmr/client', { forceNetworkError: true })
+    // cy.intercept('/_content/ws', { forceNetworkError: true })
+    // cy.intercept('/_loading/sse', { forceNetworkError: true })
     cy.visit("/");
   });
+
+  // afterEach("wait for network requests to finish", () => {
+  //   cy.wait(10000)
+  // })
+  afterEach(() => {
+    // https://github.com/cypress-io/cypress/issues/350#issuecomment-688969443
+    cy.window().then(win => {
+      if (win.gc) {
+        cy.task('log', 'calling window.gc()')
+        gc();
+        gc();
+        gc();
+        gc();
+        gc();
+        cy.wait(1000)
+      } else {
+        cy.task('log', 'window.gc is unavailable')
+      }
+    })
+  })
 
   it("validates home page content", function() {
     cy.contains("Cecelia Martinez");
