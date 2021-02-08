@@ -5,6 +5,10 @@ describe("UI tests", function() {
     cy.visit("/");
   });
 
+  afterEach("wait for network requests to finish", () => {
+    cy.wait(10000)
+  })
+
   it("validates home page content", function() {
     cy.contains("Cecelia Martinez");
     cy.contains("Code + Content");
