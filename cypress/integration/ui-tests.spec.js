@@ -6,7 +6,7 @@ describe("UI tests", function() {
   });
 
   afterEach("wait for network requests to finish", () => {
-    cy.wait(10000)
+    cy.wait(5000)
   })
 
   it("validates home page content", function() {
