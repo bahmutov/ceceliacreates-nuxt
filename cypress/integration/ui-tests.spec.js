@@ -13,13 +13,16 @@ describe("UI tests", function() {
   // })
   afterEach(() => {
     // https://github.com/cypress-io/cypress/issues/350#issuecomment-688969443
-    cy.window().its('gc').then(gc => {
-      if (gc) {
+    cy.window().then(win => {
+      if (win.gc) {
+        cy.task('log', 'calling window.gc()')
         gc();
         gc();
         gc();
         gc();
         gc()
+      } else {
+        cy.task('log', 'window.gc is unavailable')
       }
     })
   })
